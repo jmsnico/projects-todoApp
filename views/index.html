@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Todo App</h1>
+        <form id="task-form" autocomplete="off">
+          <input
+            type="text"
+            name="task"
+            id="new-task-input"
+            placeholder="What are your plans?"
+            required
+          />
+          <button id="new-task-btn">Add Task</button>
+        </form>
+      </header>
+      <main>
+        <div id="tasks">
+          <h2>Tasks</h2>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
