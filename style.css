@@ -1,0 +1,138 @@
+:root{
+    --primaryColor: #2F0743;
+    --lighterPrimary:#b343eb;
+    --lightestPrimary:#bf61ee;
+    --darkerPrimary:#260636;
+    --darkestPrimary:#1c0428;
+    --secondaryColor : #FDC830;
+    --lighterSecondary: #e6e6e6;    
+
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primaryColor);
+    min-height: 100vh;
+    color: #fff;
+    
+}
+.container header{
+    /* text-align: center; */
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container header h1{
+    text-align: center;
+    color: var(--secondaryColor);
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+#task-form{
+    /* text-align: center; */
+   display: flex;
+}
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+#new-task-input{
+    flex: 1 1 0%;
+    background-color: var(--darkerPrimary);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--lighterSecondary);
+    font-size: 1.25rem;
+}
+#new-task-input::placeholder{
+    color: #a1a1a1;
+}
+
+#new-task-btn{
+    color: var(--lighterSecondary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 1.25rem;
+    background-image: linear-gradient(to right, #8E2DE2,#4A00E0);
+    cursor: pointer;
+    transition: 0.4s;
+}#new-task-btn:hover{
+    opacity: 0.8;
+}#new-task-btn:active{
+    opacity: 0.6;
+}
+
+.container main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#tasks{
+    padding: 1rem;
+}
+#tasks h2{
+    margin: 0 1.25rem;
+    color: var(--secondaryColor);
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    background-color: var(--darkestPrimary);
+}
+#tasks .task .text{
+    color: var(--lighterSecondary);
+    font-size: 1.25rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+#tasks .task .text:not(:read-only){
+    color: var(--lightestPrimary);
+}
+#tasks .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    transition: 0.5s;
+}.task .actions button:hover{
+    opacity: 0.8;
+}.task .actions button:active{
+    opacity: 0.6;
+}
+
+
+.task .actions .edit{
+    color: var(--lighterPrimary);
+    border-radius: 1.25rem;
+}
+.task .actions .delete{
+    color: crimson;
+    border-radius: 1.25rem;
+   
+}
